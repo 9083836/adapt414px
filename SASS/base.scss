@@ -1,0 +1,122 @@
+@import './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+$title: #252b42;
+$description: #737373;
+$white: #fff;
+
+@mixin text($fw, $fz,$ln,$ls,$color){
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $ln;
+    letter-spacing: $ls;
+    color: $color;
+    text-align: center;
+}
+
+%block{
+    width: 230px;
+    height: 209px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px, 40px;
+}
+
+%block2{
+    width: 230px;
+    height: 209px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px, 40px;
+}
+
+%block3{
+    width: 230px;
+    height: 209px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px, 40px;
+}
+
+%block4{
+    width: 230px;
+    height: 209px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px, 40px;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color:#A784C2;
+}
+
+.container{
+    max-width: 1050px;
+    margin: auto;
+}
+.title{
+    @include text(700, 40px ,142% ,0.01em , $title);
+    @media(max-width: 252px){
+        width: 252px;
+        height: 114px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+}
+.description{
+    @include text(500, 14px, 143%, 0.01em, $description);
+    @media(max-width: 225px){
+        height: 80px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    width: 511px;
+    margin: auto;
+    padding-top: 10px;
+
+}
+
+.benefits__blocks{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    @media(max-width: 241px){
+        height: 947px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    .block{
+        @extend %block;
+    }
+    .block2{
+        @extend %block2;
+    }
+    .block3{
+        @extend %block3;
+    }
+    .block4{
+        @extend %block4;
+    }
+}
